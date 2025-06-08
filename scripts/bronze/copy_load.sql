@@ -1,3 +1,32 @@
+/*
+======================================================================
+🟢 BRONZE LAYER DATA LOAD SCRIPT FOR POSTGRESQL (Windows) or if u ini linux then build .sh or bash file
+
+This script is designed to bulk load CSV data into the bronze layer 
+of a PostgreSQL Data Warehouse using \COPY commands.
+
+🚨 IMPORTANT:
+- This script must be executed using the Windows `.bat`(run_bronze.bat) file provided.
+- Do NOT run this directly in pgAdmin Query Tool — it will fail.
+- `\COPY` commands only work in the `psql` terminal or via batch automation.
+
+✅ HOW TO RUN:
+
+1. Ensure PostgreSQL is installed and `psql` is added to the system PATH.
+2. Make sure your CSV files are present in the correct paths.
+3. Double-click the provided `.bat` file (e.g., run_bronze.bat)
+   OR run from terminal:
+      psql -U postgres -d datawarehouse -h localhost < path\to\copy_load.sql
+4. Script will truncate tables, load CSVs, and show row counts.
+
+Author: Sandeep Yadav
+Last Updated: June 2025
+======================================================================
+*/
+
+
+
+
 \echo '=================================================RUNNING=========================================================='
 \echo 'Loading CRM Customer Info...'
 TRUNCATE TABLE bronze.crm_cust_info;
