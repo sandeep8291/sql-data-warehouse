@@ -1,3 +1,48 @@
+/*
+====================================================================================
+🟢 SCRIPT: PostgreSQL Stored Procedure for Silver Layer ETL
+------------------------------------------------------------------------------------
+📌 DESCRIPTION:
+This script defines a stored procedure named `load_silver_layer()` which performs
+ETL (Extract, Transform, Load) operations from the bronze layer to the silver layer 
+in a data warehouse using PostgreSQL.
+
+Each step:
+- Truncates the target silver table
+- Transforms and cleans data from the corresponding bronze table
+- Loads the cleaned data into the silver table
+- Logs progress using RAISE NOTICE
+
+📦 Tables Processed:
+1. crm_cust_info
+2. crm_prd_info
+3. crm_sales_details
+4. erp_cust_az12
+5. erp_loc_a101
+6. erp_px_cat_g1v2
+
+------------------------------------------------------------------------------------
+⚙️ HOW TO RUN USING WINDOWS `.bat` FILE:
+
+1. Make sure the procedure is created using this script in pgAdmin or psql.
+2. Create a `.bat` file with the following content:
+
+   @echo off
+   SET PGPASSWORD=your_postgres_password
+   psql -U postgres -d your_database_name -h localhost -c "CALL load_silver_layer();"
+   pause
+
+3. Save it as `run_silver_layer.bat` and double-click to execute.
+
+✔ This will:
+   - Connect to PostgreSQL
+   - Call the stored procedure
+   - Run all silver layer ETL steps automatically
+
+====================================================================================
+*/
+
+
 CREATE OR REPLACE PROCEDURE silver.load_silver_layer()
 LANGUAGE plpgsql
 AS $$
