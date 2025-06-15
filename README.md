@@ -37,7 +37,7 @@ This project involves:
 
 Everything is for Free!
 - **[Datasets](datasets/):** Access to the project dataset (csv files).
-- **[posggresql download](https://www.postgresql.org/download/):** Posgresql for your SQL database.
+- **[posgresql download](https://www.postgresql.org/download/):** Posgresql for your SQL database.
 - **[Git Repository](https://github.com/):** Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
 - **[DrawIO](https://www.drawio.com/):** Design data architecture, models, flows, and diagrams.
 
