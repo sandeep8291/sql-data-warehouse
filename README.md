@@ -97,11 +97,19 @@ data-warehouse-project/
 ```
 ---
 
+## 🧠 How It Works
+- .bat scripts automate with psql to call .sql files or stored procedures
+- Stored procedures encapsulate ETL logic using TRUNCATE + INSERT
+- Gold views materialize a star schema for analytics
+- Designed for automation via Windows Task Scheduler if desired
+
+
+
 ## ☕ Stay Connected
 
 Let's stay in touch! Feel free to connect with me on the following platforms:
 
-[![LinkedIn](https://www.linkedin.com/in/sandeep-yadav-228330260/)
+[LinkedIn](https://www.linkedin.com/in/sandeep-yadav-228330260/)
 
 
 ---
@@ -112,4 +120,8 @@ This project is licensed under the [MIT License](LICENSE). You are free to use, 
 
 ## 🌟 About Me
 
-Hi there! I'm **Sandeep Yadav**. I’m a passionate Data Engineering enthusiast currently working on ETL pipelines, SQL databases, and Cloud technologies. My goal is to build scalable and efficient data solutions and shair Knowwledge with others 
+Hi there! I'm **Sandeep Yadav**. I’m a passionate Data Engineering enthusiast currently working on ETL pipelines, SQL databases, and Cloud technologies. My goal is to build scalable and efficient data solutions and shair Knowwledge with others
+
+## 🔖 Author
+**Sandeep Yadav — Data Engineer | SQL & ETL Enthusiast**
+🛠 Built from DataWithBaraa with PostgreSQL adaptations
