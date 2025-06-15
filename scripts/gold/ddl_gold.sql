@@ -17,6 +17,8 @@ Usage:
 -- =============================================================================
 -- Create Dimension: gold.dim_customers
 -- =============================================================================
+DROP VIEW IF EXISTS gold.dim_customers;
+
 CREATE VIEW gold.dim_customers as
 SELECT
  ROW_NUMBER() OVER(ORDER BY cst_id) as customer_key,
@@ -41,6 +43,8 @@ LEFT JOIN silver.erp_loc_a101 AS la
 -- =============================================================================
 -- Create Dimension: gold.dim_products
 -- =============================================================================
+DROP VIEW IF EXISTS gold.dim_product;   
+
 CREATE VIEW gold.dim_product as
 SELECT
  ROW_NUMBER() OVER(ORDER BY pi.prd_start_dt, pi.prd_key) as product_key,
@@ -63,6 +67,8 @@ WHERE pi.prd_end_dt IS NULL
 -- =============================================================================
 -- Create Fact Table: gold.fact_sales
 -- =============================================================================
+DROP VIEW IF EXISTS gold.fact_sales;
+    
 CREATE VIEW gold.fact_sales as
 SELECT 
  sd.sls_ord_num as order_number,
